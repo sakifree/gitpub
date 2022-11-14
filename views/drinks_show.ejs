@@ -7,10 +7,15 @@
    <title>Document</title>
 </head>
 <body>
+    <% const capitalize = (str) => {
+        return str.charAt(0).toUpperCase() + str.slice(1)
+    } %>
+
     <h1>At Foo Bar</h1>
-    <h2>Drink name: <%=drink.name%></h2>
+    <h2>Drink name: <%=capitalize(drink.name)%></h2>
     <img src="<%=drink.image%>" alt="">
     <h3>Price: <%=drink.price%></h3>
     <a href="/drinks">Back</a>
+    <a href="/food">Food</a>
 </body>
 </html>
