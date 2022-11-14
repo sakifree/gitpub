@@ -1,3 +1,6 @@
+///////////////////////////////////
+// SETUP - DECLARE DEPENDENCIES - CREATE APP OBJECT
+///////////////////////////////////
 require("dotenv").config()
 const express = require("express")
 const app = express()
@@ -5,8 +8,14 @@ const drinks = require("./models/drinks")
 const food = require("./models/food")
 const morgan = require("morgan")
 
+///////////////////////////////////
+// MIDDLEWARE
+///////////////////////////////////
 app.use(morgan("dev"))
 
+///////////////////////////////////
+// ROUTES
+///////////////////////////////////
 app.get("/", (req, res) => {
     res.send(`
         Welcome to the Gitpub App! </br> 
@@ -52,6 +61,9 @@ app.get("/food/:id", (req, res) => {
     )
 })
 
+///////////////////////////////////
+// SERVER LISTENER
+///////////////////////////////////
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {
     console.log(`Listening on planet ${PORT}`)

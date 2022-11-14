@@ -10,7 +10,13 @@
     <% const capitalize = (str) => {
         return str.charAt(0).toUpperCase() + str.slice(1)
     } %>
-
+    <style type="text/css">
+        body {
+            color: tan;
+            background-color: lightcyan;
+            font-family:Verdana, Geneva, Tahoma, sans-serif
+        }
+    </style>
     <h1>At Foo Bar</h1>
     <h2>Drink name: <%=capitalize(drink.name)%></h2>
     <img src="<%=drink.image%>" alt="">
