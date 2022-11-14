@@ -21,7 +21,7 @@
      <ul>
         <% for(let i = 0; i < allDrinks.length; i++) { %>
             <li>
-                <%=capitalizeFirstLetter(allDrinks[i].name) %>
+                <a href="/drinks/<%=i%>"><%=capitalizeFirstLetter(allDrinks[i].name) %></a>
             </li>
         <% } %>
     </ul>
