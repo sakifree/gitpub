@@ -7,6 +7,10 @@
     <title>Document</title>
  </head>
  <body>
+    <% const capitalizeFirstLetter = (str) => {
+        return str.charAt(0).toUpperCase() + str.slice(1)
+    } %>
+
     <h1>Welcome To Gitpub</h1>
     <style type="text/css">
         body {
@@ -14,5 +18,12 @@
             background-color: steelblue;
         }
     </style>
+     <ul>
+        <% for(let i = 0; i < allDrinks.length; i++) { %>
+            <li>
+                <%=capitalizeFirstLetter(allDrinks[i].name) %>
+            </li>
+        <% } %>
+    </ul>
  </body>
  </html>
