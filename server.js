@@ -19,6 +19,10 @@ app.get("/drinks", (req, res) => {
     )
 })
 
+app.get("/drinks/:id", (req, res) => {
+    res.send(req.params.id)
+})
+
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {
     console.log(`Listening on planet ${PORT}`)
